@@ -1,0 +1,33 @@
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-right-left {
+  from {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes input-appearance {
+  from {
+    transform: translateX(50%) scaleX(0);
+  }
+
+  to {
+    transform: translateX(0) scaleX(1);
+  }
+}

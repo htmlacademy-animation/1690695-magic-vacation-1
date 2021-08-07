@@ -123,6 +123,22 @@
     font-size: 1.4rem;
     line-height: 1.5rem;
   }
+
+  .swiper-slide-active & {
+    animation-name: fade-in-right-left;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+    animation-delay: 0.25s;
+    animation-fill-mode: both;
+  }
+
+  .swiper-slide-next & {
+    animation-name: fade-in-right-left;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+  }
 }
 
 .slider__controls {

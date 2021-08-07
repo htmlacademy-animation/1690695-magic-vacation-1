@@ -6,6 +6,21 @@
       opacity: 1;
       pointer-events: auto;
     }
+
+    .social-block__link {
+      animation-name: fade-in-up;
+      animation-duration: 0.4s;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+
+      &--insta {
+        animation-delay: 0.25s;
+      }
+
+      &--vk {
+        animation-delay: 0.5s;
+      }
+    }
   }
 }
 
@@ -17,6 +32,8 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
+  transition: transform 0.5s linear;
+
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -44,11 +61,26 @@
     height: 2.2rem;
   }
 
+  &:hover {
+    .social-block--active & {
+      color: $c-dark;
+      transform: scale(1.1);
+
+      &::before {
+        background-color: $c-light;
+        border: 2px solid $c-light;
+      }
+    }
+  }
+
   &:hover,
   .social-block--active & {
-    color: $c-purple;
+    color: $c-light;
+    transform: scale(1);
 
     &::before {
+      background-color: $c-purple;
+      border: 2px solid $c-purple;
       width: 112.5%;
       height: 112.5%;
     }
@@ -89,6 +121,7 @@
   margin-top: 1.5rem;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.5s linear;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
@@ -134,7 +167,6 @@
 
   &:focus-within {
     opacity: 1;
-    pointer-events: auto;
   }
 
   .social-block--active & {
