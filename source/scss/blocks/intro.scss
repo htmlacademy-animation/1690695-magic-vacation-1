@@ -95,6 +95,8 @@
   line-height: 1.27;
   animation-name: fade-in-up;
   animation-duration: 1.5s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
