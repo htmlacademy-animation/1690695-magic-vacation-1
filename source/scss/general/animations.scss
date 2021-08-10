@@ -41,3 +41,31 @@
     transform: translateY(-100%);
   }
 }
+
+@keyframes scale-in {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rules-btn-appearance {
+  0% {
+    width: 1.1rem;
+    color: transparent;
+    opacity: 0;
+  }
+
+  70% {
+    color: transparent;
+  }
+
+  100% {
+    width: 21rem;
+    color: $c-dark;
+    opacity: 1;
+  }
+}
