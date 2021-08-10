@@ -362,3 +362,16 @@
 .screen--rules {
   background-color: $c-dark;
 }
+
+.animation-background {
+  position: relative;
+  background-color: $c-dark;
+  z-index:9;
+}
+
+.animation-background.active {
+  animation-name: background-appearance;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}

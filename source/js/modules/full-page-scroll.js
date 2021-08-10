@@ -3,6 +3,7 @@ import throttle from 'lodash/throttle';
 export default class FullPageScroll {
   constructor() {
     this.THROTTLE_TIMEOUT = 2000;
+    this.ANIMATION_TIMEOUT = 1000;
 
     this.screenElements = document.querySelectorAll(`.screen:not(.screen--result)`);
     this.menuElements = document.querySelectorAll(`.page-header__menu .js-menu-link`);
@@ -33,10 +34,24 @@ export default class FullPageScroll {
     this.changePageDisplay();
   }
 
-  changePageDisplay() {
+  toogleDisplay() {
     this.changeVisibilityDisplay();
-    this.changeActiveMenuItem();
     this.emitChangeDisplayEvent();
+  }
+
+  changePageDisplay() {
+    const currentScreen = document.querySelector(`.screen.active`);
+    const animationBackground = document.querySelector(`.animation-background`);
+    this.changeActiveMenuItem();
+    if (currentScreen && currentScreen.id === `story` && this.screenElements[this.activeScreen].id === `prizes`) {
+      animationBackground.classList.add(`active`);
+      setTimeout(() => {
+        this.toogleDisplay();
+        animationBackground.classList.remove(`active`);
+      }, this.ANIMATION_TIMEOUT);
+    } else {
+      this.toogleDisplay();
+    }
   }
 
   changeVisibilityDisplay() {
