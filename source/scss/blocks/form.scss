@@ -2,6 +2,12 @@
   position: relative;
   display: flex;
   align-items: center;
+  margin-left: auto;
+  animation-name: input-appearance;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-delay: 0.25s;
+  animation-fill-mode: both;
 }
 
 .form__label {
@@ -43,11 +49,6 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
-  animation-name: input-appearance;
-  animation-duration: 0.25s;
-  animation-timing-function: linear;
-  animation-delay: 0.25s;
-  animation-fill-mode: both;
 
   &:focus {
     border: 1px solid $c-purple;

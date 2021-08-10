@@ -312,14 +312,6 @@
 
 .page-header__social {
   margin-left: 4.8rem;
-  opacity: 0;
-  transform: scale(0);
-  transition: opacity 0.5s $animation-function-1 0.5s, transform 0.5s $animation-function-1 0.5s;
-
-  .loaded & {
-    opacity: 1;
-    transform: scale(1);
-  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 48px;
