@@ -52,20 +52,32 @@
   }
 }
 
-@keyframes rules-btn-appearance {
+@keyframes rules-btn-text-appearance {
   0% {
-    width: 1.1rem;
-    color: transparent;
     opacity: 0;
+    color: transparent;
   }
 
-  70% {
+  1% {
+    opacity: 1;
+  }
+
+  80% {
     color: transparent;
   }
 
   100% {
-    width: 21rem;
     color: $c-dark;
-    opacity: 1;
+  }
+}
+
+
+@keyframes rules-btn-background-appearance {
+  0% {
+    width: 45%;
+  }
+
+  95% {
+    width: 100%;
   }
 }
