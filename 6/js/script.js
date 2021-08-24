@@ -10847,7 +10847,7 @@ class TextAnimationChange {
     this.currentScreen = e.detail.screenName;
 
     TITLES.forEach((item) => {
-      if (this.prevScreen === item.screenName) {
+      if (this.prevScreen === item.screenName || !this.prevScreen) {
         this[item.name].destroyAnimation();
       }
       if (e.detail.screenName === item.screenName) {
