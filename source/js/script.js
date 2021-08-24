@@ -8,6 +8,7 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
+import TextAnimationChange from "./modules/text-animation-change";
 
 // init modules
 mobileHeight();
@@ -22,6 +23,9 @@ social();
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
 
+const textAnimationChange = new TextAnimationChange();
+textAnimationChange.init();
+
 window.addEventListener(`load`, () => {
   document.body.classList.add(`loaded`);
-})
+});

@@ -50,6 +50,20 @@
   border-radius: 3rem;
   outline: none;
 
+  &::placeholder {
+    color: transparent;
+    transition-property: color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0.8s;
+  }
+
+  .screen--show & {
+    &::placeholder {
+      color: grey;
+    }
+  }
+
   &:focus {
     border: 1px solid $c-purple;
   }
@@ -108,6 +122,14 @@
   @media (max-width: $mobile) and (orientation: landscape) {
     width: 4rem;
     height: 4rem;
+  }
+
+  .screen--show & {
+    animation-name: form-btn-text-appearance;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
   }
 
   svg {

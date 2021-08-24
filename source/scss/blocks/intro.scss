@@ -166,3 +166,20 @@
     font-size: 48px;
   }
 }
+
+.text__word {
+  margin: -0.17em 0 -0.05rem;
+  padding: 0.17em 0 0.05em;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+
+  span {
+    display: inline-block;
+    transform: translate3d(0, 1.2em, 0);
+  }
+
+  .active-text & > span {
+    transform: translate3d(0, 0, 0);
+  }
+}

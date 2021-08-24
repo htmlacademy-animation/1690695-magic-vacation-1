@@ -268,3 +268,55 @@
     }
   }
 }
+
+.result__image {
+  flex-direction: row;
+  transform: translate(0, 10%);
+
+  picture {
+    position: absolute;
+    height: auto;
+    animation-fill-mode: both;
+    &.flamingo {
+      z-index: 11;
+      width: 22%;
+      animation: result-flamingo 1.5s linear, flamingo-done-animate 3s linear infinite 1.5s;
+      transform-origin: center bottom;
+    }
+    &.suitcase {
+      width: 30%;
+      z-index: 10;
+      animation-name: result-suitcase;
+      animation-duration: 0.5s;
+      animation-timing-function: cubic-bezier(.17,.67,.31,1.25);;
+      animation-fill-mode: both;
+    }
+    &.leaf-green {
+      width: 30%;
+      transform-origin: left center;
+      animation-name: result-leaf-green;
+      animation-duration: 3s;
+      animation-delay: 0.4s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: both;
+    }
+    &.leaf-blue-1 {
+      width: 25%;
+      transform-origin: left center;
+      animation-name: result-leaf-blue-1;
+      animation-duration: 3s;
+      animation-delay: 0.4s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: both;
+    }
+    &.leaf-blue-2 {
+      width: 25%;
+      transform-origin: right center;
+      animation-name: result-leaf-blue-2;
+      animation-duration: 3s;
+      animation-delay: 0.4s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: both;
+    }
+  }
+}

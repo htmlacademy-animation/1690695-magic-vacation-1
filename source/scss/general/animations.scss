@@ -1,3 +1,13 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -71,7 +81,6 @@
   }
 }
 
-
 @keyframes rules-btn-background-appearance {
   0% {
     width: 45%;
@@ -79,5 +88,133 @@
 
   95% {
     width: 100%;
+  }
+}
+
+@keyframes form-btn-text-appearance {
+  0% {
+    opacity: 0;
+    color: transparent;
+  }
+
+  50% {
+    opacity: 1;
+    color: transparent;
+  }
+
+  95% {
+    color: $c-dark;
+  }
+}
+
+@keyframes result-suitcase {
+  0% {
+    transform: rotate(-7deg) translate(5%, 100%) scale(0);
+  }
+  100% {
+    transform: rotate(-7deg) translate(5%, 0);
+  }
+}
+
+@keyframes result-flamingo {
+  0% {
+    transform: translate(-20%, 100%) rotate(-20deg);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(-20%, 10%) rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-20%, 20%) rotate(0);
+  }
+}
+
+@keyframes flamingo-done-animate {
+  0% {
+    transform: translate(-20%, 20%) rotate(0);
+  }
+  50% {
+    transform: translate(-20%, 10%) rotate(5deg);
+  }
+  100% {
+    transform: translate(-20%, 20%) rotate(0);
+  }
+}
+
+@keyframes result-leaf-green {
+  0% {
+    transform: translate(63%, 20%) rotate(-15deg);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(63%, 20%) rotate(10deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(63%, 20%) rotate(-10deg);
+  }
+  60% {
+    transform: translate(63%, 20%) rotate(5deg);
+  }
+  75% {
+    transform: translate(63%, 20%) rotate(-3deg);
+  }
+  100% {
+    transform: translate(63%, 20%) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes result-leaf-blue-1 {
+  0% {
+    transform: translate(60%, -20%) rotate(-15deg);
+    opacity: 0;
+  }
+  15% {
+    transform: translate(60%, -20%) rotate(10deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(60%, -20%) rotate(-10deg);
+    opacity: 1;
+  }
+  55% {
+    transform: translate(60%, -20%) rotate(7deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(60%, -20%) rotate(-7deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(60%, -20%) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes result-leaf-blue-2 {
+  0% {
+    transform: translate(-50%, 20%) rotate(40deg);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, 20%) rotate(-10deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(-50%, 20%) rotate(10deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(-50%, 20%) rotate(-7deg);
+  }
+  75% {
+    transform: translate(-50%, 20%) rotate(7deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 20%) rotate(0deg);
+    opacity: 1;
   }
 }
