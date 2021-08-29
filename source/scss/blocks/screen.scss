@@ -71,11 +71,6 @@
       height: 16rem;
     }
   }
-
-  .loaded & {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .screen__footer-wrapper {
@@ -307,6 +302,32 @@
     background-size: auto calc(100vh - 13.8rem), 100% 25rem;
     background-position: top center, bottom center;
   }
+
+  &.active {
+    .slider__controls {
+      animation-name: fade-in;
+      animation-duration: 500ms;
+      animation-timing-function: $animation-function-3;
+      animation-delay: 500ms;
+      animation-fill-mode: both;
+    }
+
+    .slider__control {
+      animation-duration: 500ms;
+      animation-timing-function: $animation-function-3;
+      animation-delay: 500ms;
+      animation-fill-mode: both;
+
+      &--next {
+        animation-name: rotate-left;
+      }
+
+      &--prev {
+        animation-name: rotate-right;
+      }
+    }
+  }
+
 }
 
 .screen--prizes {

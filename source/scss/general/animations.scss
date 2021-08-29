@@ -222,3 +222,23 @@
     opacity: 1;
   }
 }
+
+@keyframes rotate-left {
+  0% {
+    transform: translateX(3em) rotate(90deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: translateX(-3em) rotate(-90deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
