@@ -280,13 +280,13 @@
     &.flamingo {
       z-index: 11;
       width: 22%;
-      animation: result-flamingo 1.5s linear, flamingo-done-animate 3s linear infinite 1.5s;
+      animation: result-flamingo-appearance 1.5s linear, flamingo-swaying 3s linear infinite 1.5s;
       transform-origin: center bottom;
     }
     &.suitcase {
       width: 30%;
       z-index: 10;
-      animation-name: result-suitcase;
+      animation-name: result-suitcase-appearance;
       animation-duration: 0.5s;
       animation-timing-function: cubic-bezier(.17,.67,.31,1.25);;
       animation-fill-mode: both;
@@ -294,7 +294,7 @@
     &.leaf-green {
       width: 30%;
       transform-origin: left center;
-      animation-name: result-leaf-green;
+      animation-name: result-leaf-green-appearance;
       animation-duration: 3s;
       animation-delay: 0.4s;
       animation-timing-function: ease-out;
@@ -303,7 +303,7 @@
     &.leaf-blue-1 {
       width: 25%;
       transform-origin: left center;
-      animation-name: result-leaf-blue-1;
+      animation-name: result-leaf-blue-1-appearance;
       animation-duration: 3s;
       animation-delay: 0.4s;
       animation-timing-function: ease-out;
@@ -312,7 +312,7 @@
     &.leaf-blue-2 {
       width: 25%;
       transform-origin: right center;
-      animation-name: result-leaf-blue-2;
+      animation-name: result-leaf-blue-2-appearance;
       animation-duration: 3s;
       animation-delay: 0.4s;
       animation-timing-function: ease-out;
