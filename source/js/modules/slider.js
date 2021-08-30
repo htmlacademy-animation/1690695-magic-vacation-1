@@ -1,9 +1,24 @@
 import Swiper from "swiper";
 
+const ColorThemes = [
+  `dark-purple`,
+  `light-blue`,
+  `dark-blue`,
+  `default`
+];
+
 export default () => {
+  let body = document.body;
+  let activeTheme = `default`;
   let storySlider;
   let sliderContainer = document.getElementById(`story`);
   sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
+
+  const changeTheme = (activeSlideIndex) => {
+    body.classList.remove(activeTheme);
+    activeTheme = ColorThemes[Math.floor(activeSlideIndex / 2)];
+    body.classList.add(activeTheme);
+  };
 
   const setSlider = function () {
     if (((window.innerWidth / window.innerHeight) < 1) || window.innerWidth < 769) {
@@ -26,6 +41,7 @@ export default () => {
             } else if (storySlider.activeIndex === 6 || storySlider.activeIndex === 7) {
               sliderContainer.style.backgroundImage = `url("img/slide4.jpg"), linear-gradient(180deg, rgba(45, 39, 63, 0) 0%, #2F2A42 16.85%)`;
             }
+            changeTheme(storySlider.activeIndex);
           },
           resize: () => {
             storySlider.update();
@@ -60,6 +76,7 @@ export default () => {
             } else if (storySlider.activeIndex === 6) {
               sliderContainer.style.backgroundImage = `url("img/slide4.jpg")`;
             }
+            changeTheme(storySlider.activeIndex);
           },
           resize: () => {
             storySlider.update();

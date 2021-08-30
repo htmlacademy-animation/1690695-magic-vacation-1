@@ -3,7 +3,8 @@ import throttle from 'lodash/throttle';
 export default class FullPageScroll {
   constructor() {
     this.THROTTLE_TIMEOUT = 2000;
-    this.ANIMATION_TIMEOUT = 1000;
+    this.SCREEN_ANIMATION_TIMEOUT = 1000;
+    this.FOOTER_ANIMATION_TIMEOUT = 500;
 
     this.screenElements = document.querySelectorAll(`.screen:not(.screen--result)`);
     this.menuElements = document.querySelectorAll(`.page-header__menu .js-menu-link`);
@@ -41,14 +42,24 @@ export default class FullPageScroll {
 
   changePageDisplay() {
     const currentScreen = document.querySelector(`.screen.active`);
-    const animationBackground = document.querySelector(`.animation-background`);
     this.changeActiveMenuItem();
+
     if (currentScreen && currentScreen.id === `story` && this.screenElements[this.activeScreen].id === `prizes`) {
+      const animationBackground = document.querySelector(`.animation-background`);
+
       animationBackground.classList.add(`active`);
       setTimeout(() => {
         this.toogleDisplay();
         animationBackground.classList.remove(`active`);
-      }, this.ANIMATION_TIMEOUT);
+      }, this.SCREEN_ANIMATION_TIMEOUT);
+    } else if (this.screenElements[this.activeScreen].id === `rules`) {
+      const prizeFooter = document.querySelector(`.screen--prizes .screen__footer-note`);
+
+      prizeFooter.classList.add(`fade-out`);
+      setTimeout(() => {
+        this.toogleDisplay();
+        prizeFooter.classList.remove(`fade-out`);
+      }, this.FOOTER_ANIMATION_TIMEOUT);
     } else {
       this.toogleDisplay();
     }

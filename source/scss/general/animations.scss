@@ -8,6 +8,16 @@
   }
 }
 
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -89,6 +99,10 @@
   95% {
     width: 100%;
   }
+
+  100% {
+    width: 100%;
+  }
 }
 
 @keyframes form-btn-text-appearance {
@@ -107,7 +121,7 @@
   }
 }
 
-@keyframes result-suitcase {
+@keyframes result-suitcase-appearance {
   0% {
     transform: rotate(-7deg) translate(5%, 100%) scale(0);
   }
@@ -116,7 +130,7 @@
   }
 }
 
-@keyframes result-flamingo {
+@keyframes result-flamingo-appearance {
   0% {
     transform: translate(-20%, 100%) rotate(-20deg);
     opacity: 0;
@@ -130,7 +144,7 @@
   }
 }
 
-@keyframes flamingo-done-animate {
+@keyframes flamingo-swaying {
   0% {
     transform: translate(-20%, 20%) rotate(0);
   }
@@ -142,7 +156,7 @@
   }
 }
 
-@keyframes result-leaf-green {
+@keyframes result-leaf-green-appearance {
   0% {
     transform: translate(63%, 20%) rotate(-15deg);
     opacity: 0;
@@ -166,7 +180,7 @@
   }
 }
 
-@keyframes result-leaf-blue-1 {
+@keyframes result-leaf-blue-1-appearance {
   0% {
     transform: translate(60%, -20%) rotate(-15deg);
     opacity: 0;
@@ -193,7 +207,7 @@
   }
 }
 
-@keyframes result-leaf-blue-2 {
+@keyframes result-leaf-blue-2-appearance {
   0% {
     transform: translate(-50%, 20%) rotate(40deg);
     opacity: 0;
@@ -216,5 +230,25 @@
   100% {
     transform: translate(-50%, 20%) rotate(0deg);
     opacity: 1;
+  }
+}
+
+@keyframes rotate-left {
+  0% {
+    transform: translateX(3em) rotate(90deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: translateX(-3em) rotate(-90deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
   }
 }
