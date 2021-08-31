@@ -10,6 +10,16 @@
     }
   }
 
+  .social-block--active .social-block__toggler::before {
+    background-color: $c-blue;
+    border: 2px solid $c-blue;
+  }
+
+  .social-block__toggler:hover::before {
+    background-color: $c-light;
+    border: 2px solid $c-light;
+  }
+
   .social-block__toggler {
     color: $c-light-blue;
 
@@ -69,9 +79,18 @@
     }
   }
 
+  .social-block--active .social-block__toggler::before {
+    background-color: $c-light-blue;
+    border: 2px solid $c-light-blue;
+  }
+
+  .social-block__toggler:hover::before {
+    background-color: $c-light;
+    border: 2px solid $c-light;
+  }
+
   .social-block__toggler {
     color: $c-blue;
-
     &:hover,
     .social-block--active & {
       color: $c-light-blue;
@@ -127,6 +146,17 @@
       }
     }
   }
+
+  .social-block--active .social-block__toggler::before {
+    background-color: $c-dark;
+    border: 2px solid $c-dark;
+  }
+
+  .social-block__toggler:hover::before {
+    background-color: $c-light;
+    border: 2px solid $c-light;
+  }
+
 
   .social-block__toggler {
     color: $c-purple;
