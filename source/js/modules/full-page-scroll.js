@@ -44,25 +44,40 @@ export default class FullPageScroll {
     const currentScreen = document.querySelector(`.screen.active`);
     this.changeActiveMenuItem();
 
-    if (currentScreen && currentScreen.id === `story` && this.screenElements[this.activeScreen].id === `prizes`) {
-      const animationBackground = document.querySelector(`.animation-background`);
+    switch (this.screenElements[this.activeScreen].id) {
+      case `prizes`:
+        if (currentScreen && currentScreen.id === `story`) {
+          const animationBackground = document.querySelector(`.animation-background`);
 
-      animationBackground.classList.add(`active`);
-      setTimeout(() => {
-        this.toogleDisplay();
-        animationBackground.classList.remove(`active`);
-      }, this.SCREEN_ANIMATION_TIMEOUT);
-    } else if (this.screenElements[this.activeScreen].id === `rules`) {
-      const prizeFooter = document.querySelector(`.screen--prizes .screen__footer-note`);
+          animationBackground.classList.add(`active`);
+          setTimeout(() => {
+            this.toogleDisplay();
+            animationBackground.classList.remove(`active`);
+          }, this.SCREEN_ANIMATION_TIMEOUT);
+        }
+        break;
+      case `rules`:
+        const prizeFooter = document.querySelector(`.screen--prizes .screen__footer-note`);
 
-      prizeFooter.classList.add(`fade-out`);
-      setTimeout(() => {
+        prizeFooter.classList.add(`fade-out`);
+        setTimeout(() => {
+          this.toogleDisplay();
+          prizeFooter.classList.remove(`fade-out`);
+        }, this.FOOTER_ANIMATION_TIMEOUT);
+        break;
+      case `game`:
+        const rulesFooter = document.querySelector(`.screen--rules .screen__disclaimer`);
+
+        rulesFooter.classList.add(`fade-out`);
+        setTimeout(() => {
+          this.toogleDisplay();
+          rulesFooter.classList.remove(`fade-out`);
+        }, this.FOOTER_ANIMATION_TIMEOUT);
+        break;
+      default:
         this.toogleDisplay();
-        prizeFooter.classList.remove(`fade-out`);
-      }, this.FOOTER_ANIMATION_TIMEOUT);
-    } else {
-      this.toogleDisplay();
     }
+
   }
 
   changeVisibilityDisplay() {
