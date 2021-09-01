@@ -30,6 +30,16 @@
   }
 }
 
+@keyframes fade-out-down {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(3rem);
+  }
+}
+
 @keyframes fade-in-right-left {
   from {
     opacity: 0;

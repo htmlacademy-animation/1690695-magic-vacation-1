@@ -9,7 +9,7 @@ const ColorThemes = [
 
 export default () => {
   let body = document.body;
-  let activeTheme = `default`;
+  let activeTheme = `dark-purple`;
   let storySlider;
   let sliderContainer = document.getElementById(`story`);
   sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
@@ -18,6 +18,10 @@ export default () => {
     body.classList.remove(activeTheme);
     activeTheme = ColorThemes[Math.floor(activeSlideIndex / 2)];
     body.classList.add(activeTheme);
+  };
+
+  const removeTheme = () => {
+    body.className = `loaded`;
   };
 
   const setSlider = function () {
@@ -93,6 +97,14 @@ export default () => {
       storySlider.destroy();
     }
     setSlider();
+  });
+
+  body.addEventListener(`screenChanged`, (e) => {
+    if (storySlider && e.detail.screenName === `story`) {
+      changeTheme(storySlider.activeIndex || 0);
+    } else {
+      removeTheme();
+    }
   });
 
   setSlider();

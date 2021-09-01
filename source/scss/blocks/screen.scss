@@ -413,6 +413,13 @@
 
 .screen--rules {
   background-color: $c-dark;
+
+  .fade-out {
+    animation-name: fade-out-down;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
 }
 
 .animation-background {
