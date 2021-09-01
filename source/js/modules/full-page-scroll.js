@@ -54,6 +54,8 @@ export default class FullPageScroll {
             this.toogleDisplay();
             animationBackground.classList.remove(`active`);
           }, this.SCREEN_ANIMATION_TIMEOUT);
+        } else {
+          this.toogleDisplay();
         }
         break;
       case `rules`:
