@@ -1,4 +1,5 @@
 import throttle from 'lodash/throttle';
+import {startPrizesAnimation} from './prizes-animation';
 
 export default class FullPageScroll {
   constructor() {
@@ -48,14 +49,15 @@ export default class FullPageScroll {
       case `prizes`:
         if (currentScreen && currentScreen.id === `story`) {
           const animationBackground = document.querySelector(`.animation-background`);
-
           animationBackground.classList.add(`active`);
           setTimeout(() => {
             this.toogleDisplay();
             animationBackground.classList.remove(`active`);
+            startPrizesAnimation();
           }, this.SCREEN_ANIMATION_TIMEOUT);
         } else {
           this.toogleDisplay();
+          startPrizesAnimation();
         }
         break;
       case `rules`:
