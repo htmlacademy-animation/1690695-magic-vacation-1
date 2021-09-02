@@ -262,3 +262,14 @@
     transform: translateX(0) rotate(0);
   }
 }
+
+@keyframes fade-in-journeys {
+  0% {
+
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
