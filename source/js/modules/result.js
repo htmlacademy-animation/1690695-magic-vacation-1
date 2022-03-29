@@ -1,3 +1,5 @@
+import {addPrizeSvgPathAnimation, startPrizeSvgAnimation} from "./animations";
+
 export default () => {
   let showResultEls = document.querySelectorAll(`.js-show-result`);
   let results = document.querySelectorAll(`.screen--result`);
@@ -14,6 +16,7 @@ export default () => {
         });
         setTimeout(() => targetEl[0].classList.add(`screen--show`, 0));
         targetEl[0].classList.remove(`screen--hidden`);
+        startPrizeSvgAnimation(targetEl[0]);
       });
     }
 
@@ -29,4 +32,11 @@ export default () => {
       });
     }
   }
+
+  let resultTitles = document.querySelectorAll(`.result__title-animated`);
+  Array.from(resultTitles).forEach((resultTitle) => {
+    Array.from(resultTitle.children).forEach((path) => {
+      addPrizeSvgPathAnimation(path);
+    });
+  });
 };
