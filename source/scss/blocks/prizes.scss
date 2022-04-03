@@ -133,6 +133,10 @@
     animation-delay: 4000ms;
     animation-fill-mode: both;
 
+    .prizes__desc b {
+      width: 1ch;
+    }
+
     .prizes__icon {
       position: relative;
       left: -5.9rem;
@@ -180,6 +184,10 @@
       animation: none;
     }
 
+    .prizes__desc b {
+      width: 1ch;
+    }
+
     .prizes__icon {
       position: relative;
       width: 26.8rem;
@@ -219,6 +227,10 @@
 
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
+    }
+
+    .prizes__desc b {
+      width: 3ch;
     }
 
     .prizes__icon {
