@@ -7,7 +7,6 @@ export default class AnimatedNumbers {
     this.elements = document.querySelectorAll(options.elements);
     this.delay = options.delay || 0;
     this.duration = options.duration || 1000;
-    this.durationAttenuation = options.durationAttenuation || 0;
   }
 
 
@@ -23,7 +22,9 @@ export default class AnimatedNumbers {
 
   clear() {
     this.elements.forEach((number) => {
-      number.innerHTML = `0`;
+      const currentCount = parseInt(number.dataset.initialCount, 10) || 0;
+
+      number.innerHTML = currentCount;
     });
   }
 

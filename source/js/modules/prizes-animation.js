@@ -11,7 +11,6 @@ const numbers = new AnimatedNumbers({
   delay: 300
 });
 
-
 export const startPrizesAnimation = async () => {
   numbers.animate();
   primaryAward.src = `img/primary-award.svg?${new Date().getTime()}`;
