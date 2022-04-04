@@ -133,6 +133,14 @@
     animation-delay: 4000ms;
     animation-fill-mode: both;
 
+    .prizes__desc {
+      animation-delay: 1.8s;
+
+      b {
+        width: 1ch;
+      }
+    }
+
     .prizes__icon {
       position: relative;
       left: -5.9rem;
@@ -180,6 +188,14 @@
       animation: none;
     }
 
+    .prizes__desc {
+      animation-delay: 5.5s;
+
+      b {
+        width: 1ch;
+      }
+    }
+
     .prizes__icon {
       position: relative;
       width: 26.8rem;
@@ -219,6 +235,14 @@
 
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
+    }
+
+    .prizes__desc {
+      animation-delay: 7s;
+
+      b {
+        width: 3ch;
+      }
     }
 
     .prizes__icon {
@@ -261,6 +285,9 @@
   margin: 5.6rem 0 0 0;
   font-size: 1.8rem;
   line-height: 1.1;
+  animation-name: fade-in;
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
 
   @media (min-width: $stop-scaling) {
     margin-top: 56px;
