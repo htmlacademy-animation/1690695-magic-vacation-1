@@ -10,6 +10,7 @@ import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import TextAnimationChange from "./modules/text-animation-change";
 import initGameTimer from "./modules/game-timer";
+import Scene2DSeaCalf from './modules/scene-2d-sea-calf.js';
 
 // init modules
 mobileHeight();
@@ -31,3 +32,5 @@ textAnimationChange.init();
 window.addEventListener(`load`, () => {
   document.body.classList.add(`loaded`);
 });
+
+const scene = new Scene2DSeaCalf();
